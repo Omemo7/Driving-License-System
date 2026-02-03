@@ -6,29 +6,29 @@ A comprehensive, enterprise-grade desktop application designed to automate the m
 
 The solution implements a strict **3-Tier (N-Tier) Architecture** to ensure scalability, maintainability, and security:
 
-* **Presentation Layer (Windows Forms):** Provides a rich, responsive user interface for clerks and administrators.
-* **Business Logic Layer (BLL):** Contains the complex rules for license eligibility, test scheduling, and fee calculations (e.g., `clsLicense`, `clsTest`).
-* **Data Access Layer (DAL):** Handles all communication with the **SQL Server** database, executing stored procedures and queries.
+* **Presentation Layer:** Provides a rich, responsive Windows Forms user interface for clerks and administrators to perform daily operations.
+* **Business Logic Layer (BLL):** Encapsulates the complex validation rules, calculations, and workflow logic for license eligibility and test scheduling.
+* **Data Access Layer (DAL):** Handles all database interactions, executing optimized stored procedures and queries against the SQL Server database.
 
 ## 🚀 Key Modules & Features
 
 ### 🪪 License Management
-* **Issuance Lifecycle:** Workflows for issuing Local and **International Licenses**.
-* **Administrative Actions:** Capabilities to Renew, Replace (Lost/Damaged), and Detain/Release licenses based on traffic violations.
-* **Driver History:** Comprehensive tracking of a driver's license history and active status.
+* **Issuance Lifecycle:** Complete workflows for issuing Local, International, and Replacement licenses.
+* **Administrative Actions:** Capabilities to Renew expired licenses, Replace lost or damaged cards, and Detain/Release licenses based on traffic violations and fines.
+* **Driver History:** Centralized tracking of a driver's entire history, including active licenses, past cancellations, and violation records.
 
 ### 📝 Testing & Appointments
-* **Scheduling System:** Logic to book appointments for Vision, Theory, and Practical driving tests.
-* **Test Results:** Workflow to record pass/fail results and automatically update application status.
-* **Retake Logic:** Rules handling failing candidates and locking retakes without fees.
+* **Scheduling System:** Robust logic to book appointments for Vision, Theory, and Practical driving tests, ensuring no scheduling conflicts.
+* **Test Results:** Workflow to record pass/fail results that automatically trigger the next stage of the application process.
+* **Retake Logic:** Rules handling failing candidates, including locking retakes for a specific duration and applying penalty fees.
 
 ### 👥 People & User Administration
-* **Centralized Person Profile:** A unified module (`clsPerson`) to manage demographic data, ensuring no duplication of records across the system.
-* **RBAC (Role-Based Access Control):** Secure login and user management (`clsUser`) to restrict sensitive operations to authorized personnel.
+* **Centralized Person Profile:** A unified module to manage demographic data, ensuring a single source of truth for all applicants and employees.
+* **RBAC (Role-Based Access Control):** Secure login and user management system that restricts sensitive administrative operations to authorized personnel only.
 
 ### 🌍 Application Processing
-* **Service Requests:** Handling different application types (New Local License, Renew License, Replacement).
-* **Fee Management:** Automated calculation of application fees based on service type.
+* **Service Requests:** Handling mechanism for various application types (New Local License, Renew License, Replacement) with unique validation rules for each.
+* **Fee Management:** Automated calculation of application fees based on the specific service type and applicant status.
 
 ## 🛠 Tech Stack
 
@@ -38,3 +38,9 @@ The solution implements a strict **3-Tier (N-Tier) Architecture** to ensure scal
 * **Architecture:** 3-Tier (Presentation, BLL, DAL)
 * **Data Access:** ADO.NET
 
+## 📸 System Screenshots
+
+| Main Dashboard | License Info | Test Appointment |
+|:---:|:---:|:---:|
+| <img src="" width="250" alt="Dashboard"> | <img src="" width="250" alt="License Card"> | <img src="" width="250" alt="Scheduling"> |
+| *Admin Dashboard* | *Driver License* | *Test Booking* |
